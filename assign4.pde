@@ -121,8 +121,8 @@ void keyPressed() {
  void alienMaker(){
   for (int i=0; i < 53; ++i){
     
-    int row = i / 12;
-    int col = i % 12;
+    int row = int(i / 12);
+    int col = int(i % 12);
  
     int x = int(50 + (40*col));
     int y = int(50 + (50*row));
