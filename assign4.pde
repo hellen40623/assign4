@@ -80,7 +80,7 @@ printText("PAUSE","Press ENTER to Resume",40,20);
 
   case GAME_WIN:
     /*---------Print Text-------------*/
-
+printText("WINNER",":"+point,40,20);
     /*--------------------------------*/
     winAnimate();
     break;
