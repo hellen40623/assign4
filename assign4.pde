@@ -122,7 +122,7 @@ void keyPressed() {
   for (int i=0; i < 53; ++i){
     
     int row = int(i / 12);
-    int col = int(i % 12);
+    int col = int (i % 12);
  
     int x = int(50 + (40*col));
     int y = int(50 + (50*row));
@@ -218,8 +218,9 @@ void checkAlienDead() {
       if (bullet != null && alien != null && !bullet.gone && !alien.die // Check Array isn't empty and bullet / alien still exist
 
       /*------------Hit detect-------------*/        ) {
-          if (bList[i].bX <=aList[j].aX + aList[j].aSize/2 && bList[i].bX >= aList[j].aX - aList[j].aSize/2 
-          &&bList[i].bY <=aList[j].aY + aList[j].aSize/2 && bList[i].bY >= aList[j].aY - aList[j].aSize/2){
+        int r=10;  
+        if (bList[i].bX <=aList[j].aX + r && bList[i].bX >= aList[j].aX - r 
+          &&bList[i].bY <=aList[j].aY + r && bList[i].bY >= aList[j].aY - r){
           removeBullet(bList[i]);
           removeAlien(aList[j]);
           point+=10;
@@ -241,7 +242,7 @@ void alienShoot(int frame) {
            laserNum=0;
         } 
         lList[laserNum++]= new Laser(aList[r].aX, aList[r].aY);
-       
+      
         //}
       }
       else{
